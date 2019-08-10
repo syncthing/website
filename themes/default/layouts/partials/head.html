@@ -1,0 +1,22 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  {{ if not .Date.IsZero -}}
+  <meta http-equiv="Date" content="{{ .Date.Format "2006-01-02T15:04:05Z" }}" />
+  <meta name="date" content="{{ .Date.Format "2006-01-02" }}" />
+  <meta name="copyright" content="{{ .Date.Format "2006" }} Kastelo Inc." />
+  {{- end }}
+  <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7111256/6008392/css/fonts.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="/css/overrides.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link rel="canonical" href="{{.Permalink}}" />
+  {{ if .Title }}
+  <title>Syncthing Foundation | {{.Title}}</title>
+  {{ else }}
+  <title>Syncthing Foundation</title>
+  {{ end }}
+</head>

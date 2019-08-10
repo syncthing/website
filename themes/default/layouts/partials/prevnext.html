@@ -1,0 +1,13 @@
+<hr class="my-4">
+<div class="row">
+<div class="col-md-6">
+  {{ if .PrevInSection }}
+  <a href="{{.PrevInSection.Permalink}}">&lt;&lt; {{.PrevInSection.Title}}</a>
+  {{ end }} &nbsp;
+</div>
+<div class="col-md-6 text-right">
+  {{ if .NextInSection }}
+  <a href="{{.NextInSection.Permalink}}">{{.NextInSection.Title}} &gt;&gt;</a>
+  {{ end }}
+</div>
+</div>

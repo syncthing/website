@@ -1,0 +1,19 @@
+<nav class="navbar navbar-expand-lg bg-light navbar-light">
+    <div class="container">
+        <a class="navbar-brand xhidden-xs-down" href="{{ .Site.BaseURL }}"><img id="logo-img"
+                src="https://syncthing.net/images/logo-horizontal.svg"></a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+            data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="navbar-nav mr-auto mt-2 mt-md-0">
+                {{ partial "nav-left.html" . }}
+            </div>
+            <div class="navbar-nav">
+                {{ partial "nav-right.html" . }}
+            </div>
+        </div>
+    </div>
+</nav>

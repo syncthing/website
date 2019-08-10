@@ -1,0 +1,5 @@
+<a class="nav-item nav-link {{ if eq .RelPermalink "/" }}active{{ end }}" href="{{ .Site.BaseURL }}">Home</a>
+<a class="nav-item nav-link {{ if eq .RelPermalink "/contact/" }}active{{ end }}"
+    href="{{ "/contact/" | absURL }}">Contact</a>
+<a class="nav-item nav-link {{ if eq .RelPermalink "/documents/" }}active{{ end }}"
+    href="{{ "/documents/" | absURL }}">Documents</a>

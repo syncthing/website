@@ -1,0 +1,6 @@
+[build]
+  publish = "_site"
+  command = "hugo --baseURL https://www.syncthing.org/"
+
+[build.environment]
+  HUGO_VERSION = "0.55.6"
