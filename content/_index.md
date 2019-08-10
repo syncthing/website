@@ -4,7 +4,7 @@
 # The Syncthing Foundation
 
 The Syncthing Foundation is a Swedish non-profit foundation
-("stiftelse").
+("stiftelse"). If you're looking for the Syncthing _project_, please see [syncthing.net](https://syncthing.net/) or [github.com/syncthing](https://github.com/syncthing/).
 
 ## Purpose
 
