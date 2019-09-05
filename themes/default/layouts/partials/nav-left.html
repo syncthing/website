@@ -1,5 +1,5 @@
-<a class="nav-item nav-link {{ if eq .RelPermalink "/" }}active{{ end }}" href="{{ .Site.BaseURL }}">Home</a>
-<a class="nav-item nav-link {{ if eq .RelPermalink "/contact/" }}active{{ end }}"
-    href="{{ "/contact/" | absURL }}">Contact</a>
-<a class="nav-item nav-link {{ if eq .RelPermalink "/documents/" }}active{{ end }}"
-    href="{{ "/documents/" | absURL }}">Documents</a>
+<a class="nav-item nav-link {{ if eq .RelPermalink "/" }}active{{ end }}" href="/">Home</a>
+<a class="nav-item nav-link {{ if eq .RelPermalink (relref . "contact.md" | string) }}active{{ end }}"
+    href="{{ relref . "contact.md" }}">Contact</a>
+<a class="nav-item nav-link {{ if eq .RelPermalink (relref . "documents.md" | string) }}active{{ end }}"
+    href="{{ relref . "documents.md" }}">Documents</a>

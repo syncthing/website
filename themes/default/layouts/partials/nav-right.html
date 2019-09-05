@@ -1,5 +1,5 @@
 {{ $numGrants := len (where .Site.RegularPages "Section" "==" "grants") }}
 {{ if gt $numGrants 0 }}
 <a class="nav-item nav-link {{ if hasPrefix .RelPermalink (relref . "grants" | string) }}active{{ end }}"
-    href="{{relref . "grants"}}">Grants</a>
+    href="{{ relref . "grants" }}">Grants</a>
 {{ end }}

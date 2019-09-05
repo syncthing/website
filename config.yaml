@@ -4,4 +4,4 @@ disablekinds: ["RSS", "sitemap", "taxonomyTerm"]
 publishdir: _site
 staticDir:
   - static
-baseURL: https://syncthing.org/
+baseURL: https://www.syncthing.org/
