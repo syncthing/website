@@ -1,6 +1,3 @@
----
----
-
 # The Syncthing Foundation
 
 The Syncthing Foundation is a Swedish non-profit foundation

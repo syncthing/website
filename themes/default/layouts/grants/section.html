@@ -1,0 +1,24 @@
+{{ define "main" }}
+<main>
+    {{ .Content }}
+
+    {{ range .Paginator.Pages }}
+    <div class="row mb-4">
+        <div class="col">
+
+            <h4>{{.Title}}</h4>
+            <p>
+                Posted: <b>{{.Date | dateFormat "2006-01-02"}}</b><br />
+                State: <b>{{.Params.state}}</b><br />
+            </p>
+            <p>
+                {{.Summary}}
+            </p>
+            <p><a href="{{.RelPermalink}}">Read more...</a></p>
+            </li>
+
+        </div>
+    </div>
+    {{ end }}
+</main>
+{{ end }}

@@ -1,6 +1,7 @@
 theme: default
 cleandestinationdir: true
-disablekinds: ["RSS", "sitemap", "taxonomyTerm", "section"]
+disablekinds: ["RSS", "sitemap", "taxonomyTerm"]
 publishdir: _site
 staticDir:
   - static
+baseURL: https://syncthing.org/
