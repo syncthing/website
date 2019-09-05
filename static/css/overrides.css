@@ -54,7 +54,7 @@ figcaption {
     margin-bottom: 1em;
 }
 
-blockquote {
+blockquote, .metadata {
     border-left: 6px solid #eee;
     padding-left: 12px;
 }
