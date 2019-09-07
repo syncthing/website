@@ -1,0 +1,14 @@
+{{ range where .Site.RegularPages "Section" "==" "grants" }}
+
+<h4>{{.Title}}</h4>
+<p class="metadata">
+    Posted: <b>{{.Date | dateFormat "2006-01-02"}}</b><br />
+    State: <b>{{.Params.state}}</b><br />
+</p>
+<p>
+    {{.Summary}}
+</p>
+<p><a href="{{.RelPermalink}}">Read more...</a></p>
+</li>
+
+{{ end }}
