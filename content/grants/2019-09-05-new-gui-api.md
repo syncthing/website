@@ -2,7 +2,7 @@
 title: New GUI & REST API
 header: true
 date: 2019-09-05
-state: Accepting Applications until 2019-10-05
+state: Closed, evaluating submissions
 ---
 
 Syncthing uses a web based **GUI** (currently HTML, Bootstrap 3, JavaScript,
