@@ -57,3 +57,8 @@ blockquote, .metadata {
     border-left: 6px solid #eee;
     padding-left: 12px;
 }
+
+img.logo {
+    max-width: 250px;
+    max-height: 100px;
+}
