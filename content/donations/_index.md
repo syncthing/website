@@ -17,7 +17,7 @@ Donate securely using any major credit or debit card, processed by [Stripe](http
     <label class="sr-only" for="amount">Donation Amount</label>
     <div class="input-group mr-sm-2 my-2">
         <div class="input-group-prepend">
-            <div class="input-group-text"><span class="sr-only">EUR</span><i class="fa fa-euro-sign" title="EUR"></i></div>
+            <div class="input-group-text">&euro;</i></div>
         </div>
         <input type="number" class="form-control text-right input-lg" name="amount" id="donation-amount" placeholder="Amount" min="1" max="1000" value="20" required>
     </div>
