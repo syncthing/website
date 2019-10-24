@@ -24,6 +24,7 @@ Donate securely using any major credit or debit card, processed by [Stripe](http
     <button type="button" class="btn btn-success mr-sm-2 my-2" id="donate-once-button" role="link"><i class="fa fa-hand-holding-usd"></i>&ensp;Donate Once</button>
     <button type="button" class="btn btn-primary mr-sm-2 my-2" id="donate-monthly-button" role="link"><i class="fa fa-redo-alt"></i>&ensp;Donate Monthly</button>
 </form>
+<div id="error-message"></div>
 <script type="text/javascript" src="https://js.stripe.com/v3"></script>
 <script type="text/javascript" src="/js/stripe.js"></script>
 
