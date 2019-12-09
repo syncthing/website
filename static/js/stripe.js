@@ -9,8 +9,8 @@ document.getElementById('donate-once-button').addEventListener('click', function
     var amount = +(document.getElementById('donation-amount').value);
     stripe.redirectToCheckout({
         items: [{ sku: oneTimeSKU, quantity: amount }],
-        successUrl: 'https://syncthing.org/donations/success/',
-        cancelUrl: 'https://syncthing.org/donations/cancelled/',
+        successUrl: 'https://syncthing.net/donations/success/',
+        cancelUrl: 'https://syncthing.net/donations/cancelled/',
         submitType: 'donate',
     }).then(function (result) {
         if (result.error) {
@@ -24,8 +24,8 @@ document.getElementById('donate-monthly-button').addEventListener('click', funct
     var amount = +(document.getElementById('donation-amount').value);
     stripe.redirectToCheckout({
         items: [{ plan: recurringSKU, quantity: amount }],
-        successUrl: 'https://syncthing.org/donations/recurring/',
-        cancelUrl: 'https://syncthing.org/donations/cancelled/',
+        successUrl: 'https://syncthing.net/donations/recurring/',
+        cancelUrl: 'https://syncthing.net/donations/cancelled/',
     }).then(function (result) {
         if (result.error) {
             var displayError = document.getElementById('error-message');
