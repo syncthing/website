@@ -1,8 +1,7 @@
 ---
 title: Donations
+header: true
 ---
-
-# Donations
 
 Developing Syncthing costs money, in domain and hosting fees for the various
 servers we need to run the operation such as discovery servers, build
@@ -11,7 +10,6 @@ periodically award grants for the development of specific features, which is
 paid for by these donations.
 
 Donate securely using any major credit or debit card, processed by [Stripe](https://stripe.com).
-
 
 <form class="form-inline">
     <label class="sr-only" for="amount">Donation Amount</label>
@@ -27,14 +25,14 @@ Donate securely using any major credit or debit card, processed by [Stripe](http
 <div id="error-message"></div>
 <script type="text/javascript" src="https://js.stripe.com/v3"></script>
 <script type="text/javascript" src="/js/stripe.js"></script>
+<p>
 
 If you experience any issues with the donation handling, regret your
 donation and want a refund, or want to cancel a recurring donation please
 feel free to contact [donations@syncthing.org](mailto:donations@syncthing.org) at any time.
 
-If you want to become a corporate sponsor of the project and be featured
-here or on [Syncthing.net](https://syncthing.net/) we're happy to discuss
-that too!
+If you'd like to become a corporate sponsor of the project and be featured here
+we're happy to discuss that too!
 
 ---
 

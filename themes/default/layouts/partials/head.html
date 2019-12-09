@@ -7,7 +7,7 @@
   {{ if not .Date.IsZero -}}
   <meta http-equiv="Date" content="{{ .Date.Format "2006-01-02T15:04:05Z" }}" />
   <meta name="date" content="{{ .Date.Format "2006-01-02" }}" />
-  <meta name="copyright" content="{{ .Date.Format "2006" }} Kastelo Inc." />
+  <meta name="copyright" content="{{ .Date.Format "2006" }} The syncthing Foundation" />
   {{- end }}
   <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7111256/6008392/css/fonts.css" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -15,9 +15,19 @@
   <link href="/css/overrides.css" type="text/css" rel="stylesheet" />
   <link href="/css/font-awesome.css" type="text/css" rel="stylesheet" />
   <link rel="canonical" href="{{.Permalink}}" />
+  <link rel="shortcut icon" href="/img/favicon.png" type="image/png">
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/img/favicons/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/favicons/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/favicons/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/img/favicons/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/favicons/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/img/favicons/apple-touch-icon-152x152.png" />
+  <link rel="icon" type="image/png" href="/img/favicons/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="/img/favicons/favicon-16x16.png" sizes="16x16" />
+  <meta name="msapplication-TileImage" content="/img/favicons/mstile-144x144.png" />
   {{ if .Title }}
-  <title>Syncthing Foundation | {{.Title}}</title>
+  <title>Syncthing | {{.Title}}</title>
   {{ else }}
-  <title>Syncthing Foundation</title>
+  <title>Syncthing</title>
   {{ end }}
 </head>

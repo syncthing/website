@@ -18,8 +18,8 @@ h3.card-header {
 }
 
 #logo-img {
-    height: 32px;
-    margin-bottom: 4px;
+    height: 48px;
+    margin-bottom: 8px;
 }
 
 #footer-logo {
@@ -35,7 +35,7 @@ h3.card-header {
 }
 
 pre {
-    font-size: 100%;
+    font-size: 80%;
 }
 code {
     font-size: 80%
@@ -61,4 +61,17 @@ blockquote, .metadata {
 img.logo {
     max-width: 250px;
     max-height: 100px;
+}
+
+.dl-item {
+    page-break-inside: avoid;
+    break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+}
+
+.jumbotron p {
+    font-size: 120%;
+}
+.jumbotron {
+    background-size: cover;
 }

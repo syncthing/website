@@ -1,5 +1,8 @@
-<a class="nav-item nav-link {{ if eq .RelPermalink "/" }}active{{ end }}" href="/"><i class="fa fa-home"></i>&ensp;Home</a>
-<a class="nav-item nav-link {{ if eq .RelPermalink (relref . "contact.md" | string) }}active{{ end }}"
-    href="{{ relref . "contact.md" }}"><i class="fa fa-comments"></i>&ensp;Contact</a>
-<a class="nav-item nav-link {{ if eq .RelPermalink (relref . "documents.md" | string) }}active{{ end }}"
-    href="{{ relref . "documents.md" }}"><i class="fa fa-file-alt"></i>&ensp;Documents</a>
+<a class="nav-item nav-link {{ if eq .RelPermalink "/" }}active{{ end }}" href="/"><i
+        class="fa fa-home"></i>&ensp;Home</a>
+<a class="nav-item nav-link {{ if eq .RelPermalink (relref . "downloads.md" | string) }}active{{ end }}"
+    href="{{ relref . "downloads.md" }}"><i class="fa fa-download"></i>&ensp;Downloads</a>
+<a class="nav-item nav-link {{ if eq .RelPermalink (relref . "security.md" | string) }}active{{ end }}"
+    href="{{ relref . "security.md" }}"><i class="fa fa-shield-alt"></i>&ensp;Security</a>
+<a class="nav-item nav-link {{ if eq .RelPermalink (relref . "foundation.md" | string) }}active{{ end }}"
+    href="{{ relref . "foundation.md" }}"><i class="fa fa-circle"></i>&ensp;Foundation</a>

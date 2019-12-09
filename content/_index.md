@@ -1,22 +1,81 @@
-# The Syncthing Foundation
+---
+resources:
+    name: winter
+    src: winter.jpg
+---
 
-The Syncthing Foundation is a registered Swedish non-profit foundation.
-If you're looking for the Syncthing _project_ or _software_, please see [syncthing.net](https://syncthing.net/) or [github.com/syncthing](https://github.com/syncthing/).
 
-## Purpose
+{{% jumbotron bgResource="winter.jpg" %}}
+Syncthing is a **continuous file synchronization** program. It synchronizes
+files between two or more computers in real time, safely protected from prying
+eyes. Your data is your data alone and you deserve to choose where it is stored,
+whether it is shared with some third party, and how it's transmitted over the
+internet.
 
-The foundation bylaws have this to say about the purpose of the foundation:
+{{% center %}}
+## Get Started
+Grab one of the [downloads]({{< relref downloads >}}) and start syncing!
+{{% /center %}}
+{{% /jumbotron %}}
 
-> The purpose of the foundation is to maintain and encourage development and
-> usage of the free software Syncthing and its required infrastructure. The
-> foundation can provide grants on its own initiative, or by application
-> according to the rules put forth by the board.
 
-This is quite general, and in practice it means the foundation pays for the
-infrastructure required to run Syncthing (like the syncthing.net website,
-discovery servers, build servers, and so on), but is open to providing grants
-for specific projects that further the cause.
+{{% row %}}
+{{% col %}}
+### Private & Secure
 
-## Latest Grants
+- **Private.** None of your data is ever stored anywhere else other than on your
+  computers. There is no central server that might be compromised, legally or
+  illegally.
 
-{{< grants >}}
+- **Encrypted.** All communication is secured using TLS. The encryption used
+  includes perfect forward secrecy to prevent any eavesdropper from ever gaining
+  access to your data.
+
+- **Authenticated.** Every node is identified by a strong cryptographic
+  certificate. Only nodes you have explicitly allowed can connect to your
+  cluster.
+
+  *If you have a security concern, please see [the security page]({{< ref security.md >}}) for details and contact information.*
+{{% /col %}}
+
+{{% col %}}
+### Open
+
+- **Open Protocol.** The protocol is a [documented
+  specification](https://docs.syncthing.net/specs/bep-v1.html#bep-v1) — no
+  hidden magic.
+
+- **Open Source.** All source code is [available on
+  GitHub](https://github.com/syncthing/syncthing) — what you see is what you
+  get, there is no hidden funny business.
+
+- **Open Development.** Any bugs found are [immediately visible](https://github.com/syncthing/syncthing/issues) for anyone to
+  browse — no hidden flaws.
+
+- **Open Discourse.** Development and usage is always [open for discussion](https://forum.syncthing.net/).
+{{% /col %}}
+{{% /row %}}
+
+
+### Easy to Use
+
+- **Powerful.** Synchronize as many folders as you need with different people or
+  just between your own devices.
+
+- **Portable.** Configure and monitor Syncthing via a responsive and powerful
+  interface accessible via your browser. Works on Mac OS X, Windows, Linux,
+  FreeBSD, Solaris and OpenBSD. Run it on your desktop computers and synchronize
+  them with your server for backup.
+
+- **Simple.** Syncthing doesn't need IP addresses or advanced configuration: it
+  just works, over LAN and over the Internet. Every machine is identified by an
+  ID. Give your ID to your friends, share a folder and watch: UPnP will do if
+  you don't want to port forward or you don't know how.
+
+
+{{% sponsor src="https://kastelo.net/img/logo.svg" href="https://kastelo.net/" %}}
+
+Kastelo provides [commercial support](https://kastelo.net/stes/) for Syncthing
+and sponsors Syncthing with development resources.
+
+{{% /sponsor %}}

@@ -1,0 +1,67 @@
+==================================================================
+https://keybase.io/syncthing
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://syncthing.net
+  * I am syncthing (https://keybase.io/syncthing) on keybase.
+  * I have a public key with fingerprint ABF7 C6E7 A821 A483 F30E  44F3 B683 AD7B 76CA B013
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "010176c7ab323eb1035b65cbc267a4d6e19b45c465111b578709e0ff03df5153bdcb0a",
+            "fingerprint": "abf7c6e7a821a483f30e44f3b683ad7b76cab013",
+            "host": "keybase.io",
+            "key_id": "b683ad7b76cab013",
+            "kid": "010176c7ab323eb1035b65cbc267a4d6e19b45c465111b578709e0ff03df5153bdcb0a",
+            "uid": "dfcac9a8586bd9d4dbd28fa1e6a4f119",
+            "username": "syncthing"
+        },
+        "service": {
+            "hostname": "syncthing.net",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1472208368,
+    "expire_in": 157680000,
+    "prev": "82cf871befae1bb056119a701e1c69674554d5e3a74360f15bbc3e6308db751d",
+    "seqno": 5,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: GnuPG v1
+
+owGtUltIFFEY3jUzM6SiFImCmHoI2pY5c+acM7sJvpjlSxhESgbTOTNn3Gl1Zi/j
+qm1Skj0YFVFRUVEQdCET1qzMMOglorKtiHpY7EJ4S6Ik6iGhy4zUS/TYeTmc//++
+7/++w3+4eJYvz39zb0869TCzyP/oPfPV3l32NS0wW28Twmkhymcu3qjzpKNGTV0I
+CyIQAcEaoQxKkDMgQsQw0pgmYUJlHXMQYjLSZIwAAAwRhYghLhqGCHUDAQSZrjGR
+CgHBMK0GnoglTMtxZSkziIY5oYoEqKxAA4pclg3IsAKpTpg7kjIRQJcYsZMewzXH
+aJIHTdutuQ91xt4/8P/Zd/OMnG5oVAtRBSmY6SFd1pkuKQYFHFPZACDkAZM8YdEm
+7qKTbZbmRNzAQntAcMspU+Pez3pR/oYELe647FjCdmzNbnRbEceJJcMe1WmLedgW
+ztTfKiozLd0TDggpnkiatiWEgYvUHNOTBTKRJFGBWAkIvDVmJrhqeghEsCK6x5vD
+U66kImmGspUAxg3KAWMiwm4KSkTAgYZDmMgIyTrikBIZYtEAiDENcgxFRWcEAV3w
+gsUtWwgj1ydt8CKZDRZ1mhNcaC/q8i/N9/nzfAWz87wd8xXNXfBn8YLjc37WFr5g
+X47k06FDfRXZjalIeVXdxSz5NrX62Lnnd9bUZfbXB4crx6unj58WuTOx4erZ8cZZ
+F6ORT/1033ZzvLR+8HbFyLv4wJbmyYlb81R0pc5a8nJ/Q/xSYXr43ou171pzy6lw
+cvGT6WRHd98BHM1lV2we7c+lB4prB0erwkMH/WsW7rjfFH56ombnustHW7LNt05E
+X8+/nOkdXlWZy48W9JdFLb+dOz91ROo5MzY5ONY5dk0qL+v8duoSXf+G/ohvmtr9
+tqa7ZATtUW8ch/Htud4Hga0FddU3V3783J3tiJduKy7JfFc/vJp+fGGgr+v60etV
+I+r9XYujwf5n1XbmFw==
+=I8ei
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/syncthing
+
+==================================================================

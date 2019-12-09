@@ -1,6 +1,21 @@
 [build]
   publish = "_site"
-  command = "hugo --baseURL https://www.syncthing.org/"
+  command = "./build.sh"
 
 [build.environment]
-  HUGO_VERSION = "0.55.6"
+  HUGO_VERSION = "0.60.1"
+
+[[redirects]]
+  from = "/security.html"
+  to = "/security/"
+  status = 301
+
+[[redirects]]
+  from = "https://syncthing.org/"
+  to = "https://syncthing.net/foundation/"
+  status = 301
+
+[[redirects]]
+  from = "https://www.syncthing.org/"
+  to = "https://syncthing.net/foundation/"
+  status = 301
