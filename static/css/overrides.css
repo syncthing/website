@@ -75,3 +75,6 @@ img.logo {
 .jumbotron {
     background-size: cover;
 }
+.text-white a {
+    color: #2bf;
+}
