@@ -60,6 +60,8 @@ along the way.
 {{% /row %}}
 
 
+{{% row %}}
+{{% col %}}
 ### Easy to Use
 
 - **Powerful.** Synchronize as many folders as you need with different people or
@@ -74,6 +76,13 @@ along the way.
   just works, over LAN and over the Internet. Every machine is identified by an
   ID. Give your ID to your friends, share a folder and watch: UPnP will do if
   you don't want to port forward or you don't know how.
+{{% /col %}}
+
+{{% col %}}
+<img src="/img/screenshot.png" class="mt-4 pt-4 img img-fluid">
+{{% /col %}}
+
+{{% /row %}}
 
 
 {{% sponsor src="https://kastelo.net/img/logo.svg" href="https://kastelo.net/" %}}
