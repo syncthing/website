@@ -60,10 +60,10 @@ along the way.
 {{% /row %}}
 
 
-{{% row %}}
-{{% col %}}
 ### Easy to Use
 
+{{% row %}}
+{{% col %}}
 - **Powerful.** Synchronize as many folders as you need with different people or
   just between your own devices.
 
@@ -79,7 +79,7 @@ along the way.
 {{% /col %}}
 
 {{% col %}}
-<img src="/img/screenshot.png" class="mt-4 pt-4 img img-fluid">
+<img src="/img/screenshot.png" class="img img-fluid">
 {{% /col %}}
 
 {{% /row %}}
