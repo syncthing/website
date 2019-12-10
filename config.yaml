@@ -4,7 +4,7 @@ disablekinds: ["RSS", "sitemap", "taxonomyTerm"]
 publishdir: _site
 staticDir:
   - static
-# baseURL: https://syncthing.net/
+baseURL: https://syncthing.net/
 
 markup:
   goldmark:
