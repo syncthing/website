@@ -14,7 +14,10 @@ internet.
 
 {{% center %}}
 ## Get Started
-Grab one of the [downloads]({{< relref downloads >}}) and start syncing!
+Grab one of the [downloads]({{< relref downloads >}}) and start syncing! \
+Check out the [getting started
+guide](https://docs.syncthing.net/intro/getting-started.html) for some tips
+along the way.
 {{% /center %}}
 {{% /jumbotron %}}
 
