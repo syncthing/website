@@ -4,6 +4,9 @@ title: Security
 
 # Security
 
+
+## Reporting Issues
+
 **If you believe that you've found a Syncthing-related security vulnerability,
 please report it by emailing security@syncthing.net.** Do not report it in the
 open issue tracker. The [security team PGP key

@@ -1,0 +1,3 @@
+Policy: https://syncthing.net/security/
+Contact: security@syncthing.net
+Encryption: https://syncthing.net/security-key.txt
