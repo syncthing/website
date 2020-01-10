@@ -35,9 +35,8 @@ executable and a web based user interface.
 {{< release >}}
 
 If you are unsure what to download and you're running on a normal computer,
-please use the "amd64" (aka 64 bit Intel or x86-64) build for your operating
-system. If you're running on an oddball system such as a NAS, please consult
-your vendor.
+please use the "64-bit (x86-64)" build for your operating system. If you're
+running on an oddball system such as a NAS, please consult your vendor.
 
 
 ## Debian / Ubuntu Packages
