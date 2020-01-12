@@ -23,8 +23,8 @@ Donate securely using any major credit or debit card, processed by [Stripe](http
     <button type="button" class="btn btn-primary mr-sm-2 my-2" id="donate-monthly-button" role="link"><i class="fa fa-redo-alt"></i>&ensp;Donate Monthly</button>
 </form>
 <div id="error-message"></div>
-<script type="text/javascript" src="https://js.stripe.com/v3"></script>
-<script type="text/javascript" src="/js/stripe.js"></script>
+<script src="https://js.stripe.com/v3"></script>
+<script src="/js/stripe.js"></script>
 <p>
 
 If you experience any issues with the donation handling, regret your
