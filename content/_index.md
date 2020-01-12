@@ -78,13 +78,13 @@ along the way.
 {{% /col %}}
 
 {{% col %}}
-<img src="/img/screenshot.png" class="img img-fluid">
+<img src="/img/screenshot.png" class="img img-fluid" alt="Screenshot of Syncthing Web interface">
 {{% /col %}}
 
 {{% /row %}}
 
 
-{{% sponsor src="https://kastelo.net/img/logo.svg" href="https://kastelo.net/" %}}
+{{% sponsor src="https://kastelo.net/img/logo.svg" href="https://kastelo.net/" alt="Kastelo logo" %}}
 
 Kastelo provides [commercial support](https://kastelo.net/stes/) for Syncthing
 and sponsors Syncthing with development resources.
