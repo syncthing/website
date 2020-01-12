@@ -12,7 +12,7 @@ paid for by these donations.
 Donate securely using any major credit or debit card, processed by [Stripe](https://stripe.com).
 
 <form class="form-inline">
-    <label class="sr-only" for="amount">Donation Amount</label>
+    <label class="sr-only" for="donation-amount">Donation Amount</label>
     <div class="input-group mr-sm-2 my-2">
         <div class="input-group-prepend">
             <div class="input-group-text">&euro;</div>
