@@ -1,16 +1,16 @@
 {{ with $.Site.Data.release.stable }}
 <h5>Syncthing <b>v{{.}}</b></h5>
 
-<dl style="column-count: 2">
-    <div class="dl-item">
+<div style="column-count: 2">
+    <dl class="dl-item">
         <dt>Source Code</dt>
-        <dl><b><a href="https://github.com/syncthing/syncthing/releases/download/v{{.}}/syncthing-source-v{{.}}.tar.gz">Source tar.gz</a></b>
+        <dd><b><a href="https://github.com/syncthing/syncthing/releases/download/v{{.}}/syncthing-source-v{{.}}.tar.gz">Source tar.gz</a></b>
             &sdot; <a href="https://github.com/syncthing/syncthing/releases/download/v{{.}}/syncthing-source-v{{.}}.tar.gz.asc">GPG signature</a>
-        </dl>
-    </div>
-    <div class="dl-item">
+        </dd>
+    </dl>
+    <dl class="dl-item">
         <dt>Linux</dt>
-        <dl> <b><a href="https://github.com/syncthing/syncthing/releases/download/v{{.}}/syncthing-linux-amd64-v{{.}}.tar.gz">64-bit (x86-64)</a></b>
+        <dd><b><a href="https://github.com/syncthing/syncthing/releases/download/v{{.}}/syncthing-linux-amd64-v{{.}}.tar.gz">64-bit (x86-64)</a></b>
             &sdot; <a href="https://github.com/syncthing/syncthing/releases/download/v{{.}}/syncthing-linux-386-v{{.}}.tar.gz">32-bit (x86-32)</a>
             &sdot; <a href="https://github.com/syncthing/syncthing/releases/download/v{{.}}/syncthing-linux-arm-v{{.}}.tar.gz">ARM</a>
             &sdot; <a href="https://github.com/syncthing/syncthing/releases/download/v{{.}}/syncthing-linux-arm64-v{{.}}.tar.gz">ARM64</a>
@@ -21,57 +21,57 @@
             &sdot; <a href="https://github.com/syncthing/syncthing/releases/download/v{{.}}/syncthing-linux-ppc64-v{{.}}.tar.gz">PPC64</a>
             &sdot; <a href="https://github.com/syncthing/syncthing/releases/download/v{{.}}/syncthing-linux-ppc64le-v{{.}}.tar.gz">PPC64-LE</a>
             &sdot; <a href="https://github.com/syncthing/syncthing/releases/download/v{{.}}/syncthing-linux-s390x-v{{.}}.tar.gz">S/390x</a>
-        </dl>
-    </div>
-    <div class="dl-item">
+        </dd>
+    </dl>
+    <dl class="dl-item">
         <dt>Windows</dt>
-        <dl><b><a href="https://github.com/syncthing/syncthing/releases/download/v{{.}}/syncthing-windows-amd64-v{{.}}.zip">64-bit (x86-64)</a></b>
+        <dd><b><a href="https://github.com/syncthing/syncthing/releases/download/v{{.}}/syncthing-windows-amd64-v{{.}}.zip">64-bit (x86-64)</a></b>
             &sdot; <a href="https://github.com/syncthing/syncthing/releases/download/v{{.}}/syncthing-windows-386-v{{.}}.zip">32-bit (x86-32)</a>
-        </dl>
-    </div>
-    <div class="dl-item">
+        </dd>
+    </dl>
+    <dl class="dl-item">
         <dt>macOS</dt>
-        <dl><b><a href="https://github.com/syncthing/syncthing/releases/download/v{{.}}/syncthing-macos-amd64-v{{.}}.tar.gz">64-bit (x86-64)</a></b>
+        <dd><b><a href="https://github.com/syncthing/syncthing/releases/download/v{{.}}/syncthing-macos-amd64-v{{.}}.tar.gz">64-bit (x86-64)</a></b>
             &sdot; <a href="https://github.com/syncthing/syncthing/releases/download/v{{.}}/syncthing-macos-386-v{{.}}.tar.gz">32-bit (x86-32)</a>
-        </dl>
-    </div>
-    <div class="dl-item">
+        </dd>
+    </dl>
+    <dl class="dl-item">
         <dt>FreeBSD</dt>
-        <dl><b><a href="https://github.com/syncthing/syncthing/releases/download/v{{.}}/syncthing-freebsd-amd64-v{{.}}.tar.gz">64-bit (x86-64)</a></b>
+        <dd><b><a href="https://github.com/syncthing/syncthing/releases/download/v{{.}}/syncthing-freebsd-amd64-v{{.}}.tar.gz">64-bit (x86-64)</a></b>
             &sdot; <a href="https://github.com/syncthing/syncthing/releases/download/v{{.}}/syncthing-freebsd-386-v{{.}}.tar.gz">32-bit (x86-32)</a>
             &sdot; <a href="https://github.com/syncthing/syncthing/releases/download/v{{.}}/syncthing-freebsd-arm-v{{.}}.tar.gz">ARM</a>
-        </dl>
-    </div>
-    <div class="dl-item">
+        </dd>
+    </dl>
+    <dl class="dl-item">
         <dt>OpenBSD</dt>
-        <dl><b><a href="https://github.com/syncthing/syncthing/releases/download/v{{.}}/syncthing-openbsd-amd64-v{{.}}.tar.gz">64-bit (x86-64)</a></b>
+        <dd><b><a href="https://github.com/syncthing/syncthing/releases/download/v{{.}}/syncthing-openbsd-amd64-v{{.}}.tar.gz">64-bit (x86-64)</a></b>
             &sdot; <a href="https://github.com/syncthing/syncthing/releases/download/v{{.}}/syncthing-openbsd-386-v{{.}}.tar.gz">32-bit (x86-32)</a>
             &sdot; <a href="https://github.com/syncthing/syncthing/releases/download/v{{.}}/syncthing-openbsd-arm-v{{.}}.tar.gz">ARM</a>
             &sdot; <a href="https://github.com/syncthing/syncthing/releases/download/v{{.}}/syncthing-openbsd-arm64-v{{.}}.tar.gz">ARM64</a>
-        </dl>
-    </div>
-    <div class="dl-item">
+        </dd>
+    </dl>
+    <dl class="dl-item">
         <dt>NetBSD</dt>
-        <dl><b><a href="https://github.com/syncthing/syncthing/releases/download/v{{.}}/syncthing-netbsd-amd64-v{{.}}.tar.gz">64-bit (x86-64)</a></b>
+        <dd><b><a href="https://github.com/syncthing/syncthing/releases/download/v{{.}}/syncthing-netbsd-amd64-v{{.}}.tar.gz">64-bit (x86-64)</a></b>
             &sdot; <a href="https://github.com/syncthing/syncthing/releases/download/v{{.}}/syncthing-netbsd-386-v{{.}}.tar.gz">32-bit (x86-32)</a>
-        </dl>
-    </div>
-    <div class="dl-item">
+        </dd>
+    </dl>
+    <dl class="dl-item">
         <dt>Dragonfly BSD</dt>
-        <dl><b><a href="https://github.com/syncthing/syncthing/releases/download/v{{.}}/syncthing-dragonfly-amd64-v{{.}}.tar.gz">64-bit (x86-64)</a></b>
-        </dl>
-    </div>
-    <div class="dl-item">
+        <dd><b><a href="https://github.com/syncthing/syncthing/releases/download/v{{.}}/syncthing-dragonfly-amd64-v{{.}}.tar.gz">64-bit (x86-64)</a></b>
+        </dd>
+    </dl>
+    <dl class="dl-item">
         <dt>Illumos</dt>
-        <dl><b><a href="https://github.com/syncthing/syncthing/releases/download/v{{.}}/syncthing-illumos-amd64-v{{.}}.tar.gz">64-bit (x86-64)</a></b>
-        </dl>
-    </div>
-    <div class="dl-item">
+        <dd><b><a href="https://github.com/syncthing/syncthing/releases/download/v{{.}}/syncthing-illumos-amd64-v{{.}}.tar.gz">64-bit (x86-64)</a></b>
+        </dd>
+    </dl>
+    <dl class="dl-item">
         <dt>Solaris</dt>
-        <dl><b><a href="https://github.com/syncthing/syncthing/releases/download/v{{.}}/syncthing-solaris-amd64-v{{.}}.tar.gz">64-bit (x86-64)</a></b>
-        </dl>
-    </div>
-</dl>
+        <dd><b><a href="https://github.com/syncthing/syncthing/releases/download/v{{.}}/syncthing-solaris-amd64-v{{.}}.tar.gz">64-bit (x86-64)</a></b>
+        </dd>
+    </dl>
+</div>
 {{ else }}
     <p>Download the <a href="https://github.com/syncthing/syncthing/releases/latest">latest release</a> from GitHub.</p>
 {{ end }}
