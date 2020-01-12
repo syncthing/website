@@ -44,7 +44,7 @@ You can also contact the members of the board directly with any concern:
 
 <div class="card mt-4">
 <div class="card-body">
-<form name="contact" method="POST" netlify>
+<form name="contact" method="POST" data-netlify="true">
 <div class="form-group">
 <label for="name">Your name</label>
 <input type="text" name="name" id="name" class="form-control">
