@@ -3,7 +3,7 @@
   command = "./build.sh"
 
 [build.environment]
-  HUGO_VERSION = "0.60.1"
+  HUGO_VERSION = "0.62.2"
 
 [[redirects]]
   from = "/security.html"

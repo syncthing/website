@@ -5,10 +5,9 @@
     Posted: <b>{{.Date | dateFormat "2006-01-02"}}</b><br />
     State: <b>{{.Params.state}}</b><br />
 </p>
-<p>
-    {{.Summary}}
-</p>
+
+{{.Summary}}
+
 <p><a href="{{.RelPermalink}}">Read more...</a></p>
-</li>
 
 {{ end }}
