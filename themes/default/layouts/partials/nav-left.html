@@ -1,8 +1,8 @@
 <a class="nav-item nav-link {{ if eq .RelPermalink "/" }}active{{ end }}" href="/"><i
-        class="fa fa-home"></i>&ensp;Home</a>
+        class="fa fa-project-diagram"></i>&ensp;Project</a>
 <a class="nav-item nav-link {{ if eq .RelPermalink (relref . "downloads.md" | string) }}active{{ end }}"
     href="{{ relref . "downloads.md" }}"><i class="fa fa-download"></i>&ensp;Downloads</a>
 <a class="nav-item nav-link {{ if eq .RelPermalink (relref . "security.md" | string) }}active{{ end }}"
     href="{{ relref . "security.md" }}"><i class="fa fa-shield-alt"></i>&ensp;Security</a>
 <a class="nav-item nav-link {{ if eq .RelPermalink (relref . "foundation.md" | string) }}active{{ end }}"
-    href="{{ relref . "foundation.md" }}"><i class="fa fa-circle"></i>&ensp;Foundation</a>
+    href="{{ relref . "foundation.md" }}"><i class="fa fa-user-friends"></i>&ensp;Foundation</a>
