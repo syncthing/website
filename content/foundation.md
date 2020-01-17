@@ -19,7 +19,7 @@ Bylaws
 :   The foundation bylaws are available [here in PDF form](https://raw.githubusercontent.com/syncthing/foundation/master/bylaws.pdf).
 
 Annual Report
-:   The first fiscal years ends on December 31, 2019. Expect a first annual report some time early 2020.
+:   The annual report for the 2019 fiscal year is available [here in PDF form](https://raw.githubusercontent.com/syncthing/foundation/master/annual-report-2019.pdf).
 
 Other Documents
 :   Other documents may be available in the [foundation documentation repository](https://github.com/syncthing/foundation/).
