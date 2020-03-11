@@ -14,8 +14,10 @@
   from = "https://syncthing.org/"
   to = "https://syncthing.net/foundation/"
   status = 301
+  force = true
 
 [[redirects]]
   from = "https://www.syncthing.org/"
   to = "https://syncthing.net/foundation/"
   status = 301
+  force = true
