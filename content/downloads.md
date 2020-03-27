@@ -14,6 +14,9 @@ These are some popular and user friendly OS integrations, providing things like 
   macOS application bundle
 - **[Syncthing-GTK](https://github.com/kozec/syncthing-gtk/releases/latest)**:
   cross-platform GUI wrapper
+- **[syncthingtray](https://github.com/Martchus/syncthingtray/releases/latest)**:
+  Tray application and Dolphin/Plasma integration for Syncthing
+
 
 There's a wealth of further integrations of all kinds listed on the [community
 contributions](https://docs.syncthing.net/users/contrib.html) page. Each
