@@ -84,7 +84,7 @@ along the way.
 {{% /row %}}
 
 
-{{% sponsor src="https://kastelo.net/img/logo.svg" href="https://kastelo.net/" alt="Kastelo logo" %}}
+{{% sponsor href="https://kastelo.net/" alt="Kastelo logo" %}}
 
 Kastelo provides [commercial support](https://kastelo.net/stes/) for Syncthing
 and sponsors Syncthing with development resources.

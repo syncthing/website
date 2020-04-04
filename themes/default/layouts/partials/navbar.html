@@ -1,6 +1,6 @@
 <a class="navbar-brand xhidden-xs-down" href="/"><img id="logo-img" src="/img/logo-horizontal.svg" alt="Syncthing logo"></a>
 
-<nav class="navbar navbar-expand-lg bg-light navbar-light">
+<nav class="navbar navbar-expand-lg nav-bg nav-navbar">
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -12,6 +12,16 @@
         </div>
         <div class="navbar-nav">
             {{ partial "nav-right.html" . }}
+        </div>
+        <div class="navbar-nav">
+            <a class="nav-item nav-link" href="#" aria-hidden="true"><i id="theme-selector"></i></a>
+            <script type="application/javascript">
+                // Avoid value flash on the selector by setting initial
+                // value early.
+                const sel = document.getElementById('theme-selector');
+                sel.className = getThemeClasses(getTheme());
+                sel.onclick = themeSelectorClicked;
+            </script>
         </div>
     </div>
 </nav>

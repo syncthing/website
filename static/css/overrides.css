@@ -5,6 +5,23 @@ html, body {
     font-size: 13pt;
 }
 
+nav .nav-item{
+    color: rgba(0, 0, 0, .5);
+}
+
+.nav-navbar .nav-item.nav-link.active{
+    color: rgba(0, 0, 0, .9);
+}
+
+.navbar-toggler{
+    color: rgba(0, 0, 0, .5);
+    border-color: rgba(0, 0, 0, .1)
+}
+
+.nav-navbar .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
 h1, h2, h3, h4, h5 {
     font-family: "Ideal Sans SSm A", "Ideal Sans SSm B", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-style: normal;
@@ -61,6 +78,7 @@ blockquote, .metadata {
 img.logo {
     max-width: 250px;
     max-height: 100px;
+    content: url("https://www.kastelo.net/img/logo.svg")
 }
 
 .dl-item {
