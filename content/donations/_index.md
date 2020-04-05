@@ -38,4 +38,4 @@ we're happy to discuss that too!
 
 ### Silver Sponsors <small>(&euro;100 / mon)</small>
 
-<a href="https://kastelo.net/"><img class="img logo" alt="Kastelo logo" /></a>
+{{% sponsor href="https://kastelo.net/" alt="Kastelo logo" id="logo-id" %}}

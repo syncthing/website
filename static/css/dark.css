@@ -49,7 +49,7 @@ a {
     color: rgb(0, 183, 255);
 }
 
-img.logo {max-width: 250px;
+#logo-id {
     max-width: 250px;
     max-height: 100px;
     content: url("https://www.kastelo.net/img/logo-light.svg")

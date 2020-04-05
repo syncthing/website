@@ -75,7 +75,7 @@ blockquote, .metadata {
     padding-left: 12px;
 }
 
-img.logo {
+#logo-id {
     max-width: 250px;
     max-height: 100px;
     content: url("https://www.kastelo.net/img/logo.svg")
