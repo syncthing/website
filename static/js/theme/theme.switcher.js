@@ -14,10 +14,8 @@ function themeSelectorClicked() {
 function linkLoader(param) {
     if (param == 'light') {
         link.removeAttribute('href');
-        document.querySelector('.logo').setAttribute('src', 'https://www.kastelo.net/img/logo.svg')
     } else if (param == 'dark') {
         link.setAttribute('href', '/css/dark.css');
-        document.querySelector('.logo').setAttribute('src', 'https://www.kastelo.net/img/logo-light.svg')
     } else {
         link.setAttribute('href', '/css/auto.css');
     }
