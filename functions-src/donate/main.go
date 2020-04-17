@@ -3,9 +3,12 @@ package main
 import (
 	"context"
 	"encoding/json"
+	"errors"
 	"fmt"
+	"io/ioutil"
 	"net/http"
 	"os"
+	"time"
 
 	"github.com/aws/aws-lambda-go/events"
 	"github.com/aws/aws-lambda-go/lambda"
@@ -14,17 +17,24 @@ import (
 )
 
 const (
-	recurringSKU = "plan_FZzqRxfQtAx34O"
+	recurringSKU             = "plan_FZzqRxfQtAx34O"
+	captchaValidationTimeout = 5 * time.Second
+)
+
+var (
+	stripeSecretKey    = os.Getenv("STRIPE_SECRET_KEY")
+	recaptchaSecretKey = os.Getenv("RECAPTCHA_SECRET_KEY")
 )
 
 func main() {
-	stripe.Key = os.Getenv("STRIPE_SECRET_KEY")
+	stripe.Key = stripeSecretKey
 	lambda.Start(handler)
 }
 
 type donationRequest struct {
-	Count     int  // SKU units, which are a euro each
-	Recurring bool // monthly, or one time only?
+	Count     int    // SKU units, which are a euro each
+	Recurring bool   // monthly, or one time only?
+	Captcha   string // magic token
 }
 
 func handler(ctx context.Context, request events.APIGatewayProxyRequest) (*events.APIGatewayProxyResponse, error) {
@@ -35,8 +45,18 @@ func handler(ctx context.Context, request events.APIGatewayProxyRequest) (*event
 	}
 
 	// Trivial validation
+	if req.Captcha == "" {
+		return nil, errors.New("missing captcha token")
+	}
 	if req.Count <= 0 || req.Count > 1000 {
 		return nil, fmt.Errorf("count %d out of range", req.Count)
+	}
+
+	// Captcha validation
+	captchaCtx, cancel := context.WithTimeout(ctx, captchaValidationTimeout)
+	defer cancel()
+	if err := verifyRecaptcha(captchaCtx, req.Captcha); err != nil {
+		return nil, fmt.Errorf("captcha: %w", err)
 	}
 
 	// Get the Stripe session
@@ -96,11 +116,51 @@ func recurringParams(count int) *stripe.CheckoutSessionParams {
 	return &stripe.CheckoutSessionParams{
 		SubscriptionData: &stripe.CheckoutSessionSubscriptionDataParams{
 			Items: []*stripe.CheckoutSessionSubscriptionDataItemsParams{
-				&stripe.CheckoutSessionSubscriptionDataItemsParams{
+				{
 					Plan:     stripe.String(recurringSKU),
 					Quantity: stripe.Int64(int64(count)),
 				},
 			},
 		},
 	}
+}
+
+// verifyRecaptcha checks the given token against Google's verification
+// service and returns nil if it checks out.
+func verifyRecaptcha(ctx context.Context, token string) error {
+	req, err := http.NewRequest(http.MethodPost, "https://www.google.com/recaptcha/api/siteverify", nil)
+	if err != nil {
+		return err
+	}
+	req = req.WithContext(ctx)
+
+	q := req.URL.Query()
+	q.Set("secret", recaptchaSecretKey)
+	q.Set("response", token)
+	req.URL.RawQuery = q.Encode()
+
+	resp, err := http.DefaultClient.Do(req)
+	if err != nil {
+		return fmt.Errorf("create request: %w", err)
+	}
+	defer resp.Body.Close()
+	if resp.StatusCode != http.StatusOK {
+		return fmt.Errorf("HTTP %d: %s", resp.StatusCode, resp.Status)
+	}
+	bs, err := ioutil.ReadAll(resp.Body)
+	if err != nil {
+		return fmt.Errorf("read response: %w", err)
+	}
+
+	var captchaResponse struct {
+		Success bool
+	}
+	if err := json.Unmarshal(bs, &captchaResponse); err != nil {
+		return fmt.Errorf("unmarshal response: %w", err)
+	}
+	if !captchaResponse.Success {
+		return errors.New("check failed")
+	}
+
+	return nil
 }

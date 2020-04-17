@@ -11,6 +11,10 @@ paid for by these donations.
 
 Donate securely using any major credit or debit card, processed by [Stripe](https://stripe.com).
 
+<script src="https://js.stripe.com/v3" async defer></script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script src="/js/stripe.js" async defer></script>
+<div class="g-recaptcha" data-callback="solvedCaptcha" data-sitekey="6LfkXOoUAAAAAJweCDgLlleUUy5dalTbV2mLdruJ"></div>
 <form class="form-inline">
     <label class="sr-only" for="donation-amount">Donation Amount</label>
     <div class="input-group mr-sm-2 my-2">
@@ -19,8 +23,8 @@ Donate securely using any major credit or debit card, processed by [Stripe](http
         </div>
         <input type="number" class="form-control text-right input-lg" name="amount" id="donation-amount" placeholder="Amount" min="1" max="1000" value="20" required>
     </div>
-    <button type="button" class="btn btn-success mr-sm-2 my-2" id="donate-once-button" role="link"><i class="fa fa-hand-holding-usd"></i>&ensp;Donate Once</button>
-    <button type="button" class="btn btn-primary mr-sm-2 my-2" id="donate-monthly-button" role="link"><i class="fa fa-redo-alt"></i>&ensp;Donate Monthly</button>
+    <button type="button" disabled="true" class="btn btn-success mr-sm-2 my-2" id="donate-once-button" role="link"><i class="fa fa-hand-holding-usd"></i>&ensp;Donate Once</button>
+    <button type="button" disabled="true" class="btn btn-primary mr-sm-2 my-2" id="donate-monthly-button" role="link"><i class="fa fa-redo-alt"></i>&ensp;Donate Monthly</button>
 </form>
 <div id="error-message"></div>
 <p>
