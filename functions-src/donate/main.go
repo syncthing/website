@@ -31,7 +31,7 @@ func handler(ctx context.Context, request events.APIGatewayProxyRequest) (*event
 	// We expect a request body. Unmarshal it.
 	var req donationRequest
 	if err := json.Unmarshal([]byte(request.Body), &req); err != nil {
-		return nil, fmt.Errorf("unmarshal request", req.Count)
+		return nil, fmt.Errorf("unmarshal request: %w", err)
 	}
 
 	// Trivial validation
