@@ -49,12 +49,6 @@ a {
     color: rgb(0, 183, 255);
 }
 
-#logo-id {
-    max-width: 250px;
-    max-height: 100px;
-    content: url("https://www.kastelo.net/img/logo-light.svg")
-}
-
 .jumbotron {
     background-color: #000;
 }
@@ -62,3 +56,8 @@ a {
     text-shadow: #000 0px 0px 10px;
 }
 
+/* Sponsors */
+
+#kastelo-logo {
+    content: url("https://www.kastelo.net/img/logo-light.svg")
+}

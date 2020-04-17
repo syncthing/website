@@ -75,12 +75,6 @@ blockquote, .metadata {
     padding-left: 12px;
 }
 
-#logo-id {
-    max-width: 250px;
-    max-height: 100px;
-    content: url("https://www.kastelo.net/img/logo.svg")
-}
-
 .dl-item {
     page-break-inside: avoid;
     break-inside: avoid;
@@ -95,4 +89,15 @@ blockquote, .metadata {
 }
 .text-white a {
     color: #2bf;
+}
+
+/* Sponsors */
+
+img.logo {
+    max-width: 250px;
+    max-height: 100px;
+}
+
+#kastelo-logo {
+    content: url("https://www.kastelo.net/img/logo.svg")
 }
