@@ -1,0 +1,63 @@
+html, body, .form-control {
+    background-color: #1a1a1a !important;
+    color: #e6e6e6;
+}
+.navbar {
+    background-color: #2b2b2b !important;
+}
+
+.form-control:focus {
+    color: #ffffff;
+}
+
+pre, code {
+    color: #e6e6e6;
+}
+
+hr {
+    border-color: #808080;
+}
+
+nav .navbar-brand #logo-img {
+    background-image: url(../img/logo-light.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+nav .nav-item {
+    color: rgba(255, 255, 255, .5);
+}
+
+.nav-navbar .nav-item.nav-link.active {
+    color: #ffffff;
+}
+
+.navbar-toggler{
+    color: rgba(255, 255, 255, .5);
+    border-color: rgba(255, 255, 255, .1)
+}
+
+.nav-navbar .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.card {
+    background-color: #474747 !important;
+}
+
+a {
+    color: rgb(0, 183, 255);
+}
+
+.jumbotron {
+    background-color: #000;
+}
+.jumbotron h1 {
+    text-shadow: #000 0px 0px 10px;
+}
+
+/* Sponsors */
+
+#kastelo-logo {
+    content: url("https://www.kastelo.net/img/logo-light.svg")
+}
