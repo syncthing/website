@@ -1,8 +1,10 @@
 [build]
   publish = "_site"
   command = "./build.sh"
+  functions = "functions"
 
 [build.environment]
+  GO_VERSION = "1.13.10"
   HUGO_VERSION = "0.62.2"
 
 [[redirects]]
