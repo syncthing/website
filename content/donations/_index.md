@@ -11,9 +11,6 @@ paid for by these donations.
 
 Donate securely using any major credit or debit card, processed by [Stripe](https://stripe.com).
 
-<script src="https://js.stripe.com/v3" async defer></script>
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
-<script src="/js/stripe.js" async defer></script>
 <div class="g-recaptcha" data-callback="solvedCaptcha" data-sitekey="6LfkXOoUAAAAAJweCDgLlleUUy5dalTbV2mLdruJ"></div>
 <form class="form-inline">
     <label class="sr-only" for="donation-amount">Donation Amount</label>
@@ -28,6 +25,9 @@ Donate securely using any major credit or debit card, processed by [Stripe](http
 </form>
 <div id="error-message"></div>
 <p>
+<script src="https://js.stripe.com/v3" defer></script>
+<script src="https://www.google.com/recaptcha/api.js" defer></script>
+<script src="/js/stripe.js" defer></script>
 
 If you experience any issues with the donation handling, regret your
 donation and want a refund, or want to cancel a recurring donation please

@@ -25,7 +25,7 @@ document.getElementById('donate-once-button').addEventListener('click', function
         function (data) {
             redirect(data.sessionID);
         }, "json"
-    ).error(function () {
+    ).fail(function () {
         $('#error-message').text("An error ocurred. Please reload the page and try again. :(");
     });
 });
@@ -39,7 +39,7 @@ document.getElementById('donate-monthly-button').addEventListener('click', funct
         function (data) {
             redirect(data.sessionID);
         }, "json"
-    ).error(function () {
+    ).fail(function () {
         $('#error-message').text("An error ocurred. Please reload the page and try again. :(");
     });
 });
