@@ -63,3 +63,5 @@ You can also contact the members of the board directly with any concern:
 </form>
 </div>
 </div>
+
+{{% sponsors %}}

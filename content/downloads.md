@@ -24,7 +24,7 @@ discussion and assistance for all of them is welcome on the
 
 ## Android
 
-The Android app is available on [Google Play](https://play.google.com/store/apps/details?id=com.nutomic.syncthingandroid) and [F-Droid](https://f-droid.org/packages/com.nutomic.syncthingandroid/). 
+The Android app is available on [Google Play](https://play.google.com/store/apps/details?id=com.nutomic.syncthingandroid) and [F-Droid](https://f-droid.org/packages/com.nutomic.syncthingandroid/).
 
 
 ## Base Syncthing
@@ -90,3 +90,5 @@ sudo apt-get install apt-transport-https
 ```
 
 If you insist, you can also use the above URLs with http instead of https.
+
+{{% sponsors %}}

@@ -59,5 +59,9 @@ a {
 /* Sponsors */
 
 #kastelo-logo {
-    content: url("https://www.kastelo.net/img/logo-light.svg")
+    content: url("/img/kastelo-light.svg");
+}
+
+#reefsolutions-logo {
+    content: url("/img/reefsol-light.svg");
 }

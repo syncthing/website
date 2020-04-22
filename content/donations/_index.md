@@ -36,9 +36,4 @@ feel free to contact [donations@syncthing.org](mailto:donations@syncthing.org) a
 If you'd like to become a corporate sponsor of the project and be featured here
 we're happy to discuss that too!
 
----
-
-### Silver Sponsors <small>(&euro;100 / mon)</small>
-
-<a href="https://kastelo.net/"><img src="https://www.kastelo.net/img/logo.svg" class="img logo" id="kastelo-logo" alt="Kastelo logo"></a>
-
+{{% sponsors %}}
