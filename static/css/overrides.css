@@ -102,3 +102,9 @@ blockquote, .metadata {
     content: url("/img/reefsol-dark.svg");
     max-height: 60px;
 }
+
+/* screenshot */
+
+#main-screenshot {
+    content: url("/img/screenshot.png");
+}

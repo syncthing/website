@@ -78,7 +78,7 @@ along the way.
 {{% /col %}}
 
 {{% col %}}
-<img src="/img/screenshot.png" class="img img-fluid" alt="Screenshot of Syncthing Web interface">
+<img id="main-screenshot" class="img img-fluid border" alt="Screenshot of Syncthing Web interface">
 {{% /col %}}
 
 {{% /row %}}
