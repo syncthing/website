@@ -10,8 +10,10 @@ These are some popular and user friendly OS integrations, providing things like 
 
 - **[SyncTrayzor](https://github.com/canton7/SyncTrayzor/releases/latest)**:
   Windows tray utility, filesystem watcher & launcher
+<!-- temporarily commented out as the existing release is too old
 - **[syncthing-macos](https://github.com/syncthing/syncthing-macos/releases/latest)**:
   macOS application bundle
+-->
 - **[Syncthing-GTK](https://github.com/kozec/syncthing-gtk/releases/latest)**:
   cross-platform GUI wrapper
 
