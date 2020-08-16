@@ -16,10 +16,10 @@ for specific projects that further the cause.
 ## Documents
 
 Bylaws
-:   The foundation bylaws are available [here in PDF form](https://raw.githubusercontent.com/syncthing/foundation/master/bylaws.pdf).
+:   The foundation bylaws are available [here in PDF form](https://raw.githubusercontent.com/syncthing/foundation/main/bylaws.pdf).
 
 Annual Report
-:   The annual report for the 2019 fiscal year is available [here in PDF form](https://raw.githubusercontent.com/syncthing/foundation/master/annual-report-2019.pdf).
+:   The annual report for the 2019 fiscal year is available [here in PDF form](https://raw.githubusercontent.com/syncthing/foundation/main/annual-report-2019.pdf).
 
 Other Documents
 :   Other documents may be available in the [foundation documentation repository](https://github.com/syncthing/foundation/).
