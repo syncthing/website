@@ -69,6 +69,9 @@ curl -s https://syncthing.net/release-key.txt | sudo apt-key add -
 # Add the "candidate" channel to your APT sources:
 echo "deb https://apt.syncthing.net/ syncthing candidate" | sudo tee /etc/apt/sources.list.d/syncthing.list
 
+# Increase preference of Syncthing's packages ("pinning")
+printf "Package: *\nPin: origin apt.syncthing.net\nPin-Priority: 990\n" | sudo tee /etc/apt/preferences.d/syncthing
+
 # Update and install syncthing:
 sudo apt-get update
 sudo apt-get install syncthing
