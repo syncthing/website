@@ -37,8 +37,8 @@ Send us an email at [foundation@syncthing.org](mailto:foundation@syncthing.org).
 You can also contact the members of the board directly with any concern:
 
 - Audrius Butkevicius (audrius@syncthing.org)
-- Eser Gözcü (eser@syncthing.org)
 - Jakob Borg (jakob@syncthing.org)
+- Simon Frei (simon@syncthing.org)
 
 ### Contact Form
 
