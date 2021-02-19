@@ -14,4 +14,5 @@ The app itself never collects the location in the process, and as such it also d
 The permission to access camera is used solely to scan QR codes in order to provide an easy method for entering device IDs.
 The app does not save any pictures or video in the process.
 
-The app runs Syncthing, which may collect anonymous usage data if the user consciously opts in to it or decides to run beta/condidate builds. Specific information on the anonymous usage reporting is available under https://docs.syncthing.net/users/security.html.
+The app runs Syncthing, which may collect anonymous usage data if the user consciously opts in to it or decides to run beta/condidate builds.
+Specific information on the anonymous usage reporting is available under https://docs.syncthing.net/users/security.html.
