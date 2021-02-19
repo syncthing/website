@@ -1,14 +1,20 @@
 # Syncthing-Android Privacy Policy
 
-The app syncthing-android does not collect any user information.
+Read this document to understand how the app Syncthing-Android uses data.
+
+---
+
+Syncthing-Android does not collect any user information.
 
 The app does not store any location data.
-It requires the permission to access the location in the background, to look up the currently active Wi-Fi's SSID.
-That information is used to enable syncing only on user-configurable Wi-Fi's.
-The app never actually looks up your location in the process, and thus doesn't use or store location data.
+The location permission is used only to access background location in order to check for an SSID of the currently active WiFi.
+The sole purpose of this information is to limit synchronisation to user-configured WiFi connections.
+The app itself never collects the location in the process, and as such it also does not use or save any location data.
 
-The app uses the camera solely to scan QR-codes to enter a device ID.
-Pictures are not stored in the process.
+The app does not store any camera data.
+The camera permission is used solely to scan QR codes in order to provide an easy method for entering device IDs.
+The app does not save any actual pictures or video in the process.
 
-It does run Syncthing, which may collect anonymous usage-data only if you actively opt-in to it or run betas/release candidates.
-This documentation article has specific information on this: https://docs.syncthing.net/users/security.html
+Syncthing-Android runs Syncthing, which may collect anonymous usage data related to the usage of the application.
+In order for this to happen, the user is required to either consciously opt in or use beta/release builds.
+Specific information on the anonymous usage reporting is available under https://docs.syncthing.net/users/security.html.
