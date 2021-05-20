@@ -35,7 +35,7 @@ along the way.
 
 - **Authenticated.** Every device is identified by a strong cryptographic
   certificate. Only devices you have explicitly allowed can connect to your
-  network.
+  other devices.
 
   *If you have a security concern, please see [the security page]({{< ref security.md >}}) for details and contact information.*
 {{% /col %}}
