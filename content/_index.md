@@ -33,9 +33,9 @@ along the way.
   includes perfect forward secrecy to prevent any eavesdropper from ever gaining
   access to your data.
 
-- **Authenticated.** Every node is identified by a strong cryptographic
-  certificate. Only nodes you have explicitly allowed can connect to your
-  cluster.
+- **Authenticated.** Every device is identified by a strong cryptographic
+  certificate. Only devices you have explicitly allowed can connect to your
+  network.
 
   *If you have a security concern, please see [the security page]({{< ref security.md >}}) for details and contact information.*
 {{% /col %}}
@@ -68,8 +68,8 @@ along the way.
 
 - **Portable.** Configure and monitor Syncthing via a responsive and powerful
   interface accessible via your browser. Works on Mac OS X, Windows, Linux,
-  FreeBSD, Solaris and OpenBSD. Run it on your desktop computers and synchronize
-  them with your server for backup.
+  FreeBSD, Solaris, OpenBSD, and many others. Run it on your desktop computers
+  and synchronize them with your server for backup.
 
 - **Simple.** Syncthing doesn't need IP addresses or advanced configuration: it
   just works, over LAN and over the Internet. Every machine is identified by an
