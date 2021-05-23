@@ -45,7 +45,7 @@ Tuesday of the month.
 
 ```
 # Add the "stable" channel to your APT sources:
-echo "deb https://apt.syncthing.net/ syncthing stable" | sudo tee /etc/apt/sources.list.d/syncthing.list
+echo "deb [signed-by=/usr/share/keyrings/syncthing.gpg] https://apt.syncthing.net/ syncthing stable" | sudo tee /etc/apt/sources.list.d/syncthing.list
 ```
 
 The candidate channel is updated with release candidate builds, usually every
@@ -55,7 +55,7 @@ about three weeks.
 
 ```
 # Add the "candidate" channel to your APT sources:
-echo "deb https://apt.syncthing.net/ syncthing candidate" | sudo tee /etc/apt/sources.list.d/syncthing.list
+echo "deb [signed-by=/usr/share/keyrings/syncthing.gpg] https://apt.syncthing.net/ syncthing candidate" | sudo tee /etc/apt/sources.list.d/syncthing.list
 ```
 
 Then proceed with the following steps to finish setting up the chosen track and
@@ -63,7 +63,7 @@ install Syncthing.
 
 ```
 # Add the release PGP keys:
-curl -s https://syncthing.net/release-key.txt | sudo apt-key add -
+curl -s https://syncthing.net/release-key.txt | sudo sh -c 'gpg --dearmor > /usr/share/keyrings/syncthing.gpg'
 
 # Increase preference of Syncthing's packages ("pinning")
 printf "Package: *\nPin: origin apt.syncthing.net\nPin-Priority: 990\n" | sudo tee /etc/apt/preferences.d/syncthing
