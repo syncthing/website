@@ -39,6 +39,6 @@ running on an oddball system such as a NAS, please consult your vendor.
 
 ## Debian / Ubuntu Packages
 
-Packages and installation instructions are available at [apt.syncthing.net](https://apt.syncthnig.net).
+Packages and installation instructions are available at [apt.syncthing.net](https://apt.syncthing.net).
 
 {{% sponsors %}}
