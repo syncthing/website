@@ -66,6 +66,10 @@ a {
     content: url("/img/kastelo-light.svg");
 }
 
+#reefsolutions-logo {
+    content: url("/img/reefsol-light.svg");
+}
+
 /* screenshot */
 
 #main-screenshot {
