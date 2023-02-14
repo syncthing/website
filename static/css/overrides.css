@@ -106,5 +106,6 @@ blockquote, .metadata {
 /* screenshot */
 
 #main-screenshot {
+    max-width: 100%;
     content: url("/img/screenshot.png");
 }
