@@ -5,6 +5,11 @@ html, body {
     font-size: 13pt;
 }
 
+nav {
+    padding: .5rem;
+    margin: .5rem 0;
+}
+
 nav .nav-item{
     color: rgba(0, 0, 0, .5);
 }
