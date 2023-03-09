@@ -108,3 +108,15 @@ blockquote, .metadata {
 #main-screenshot {
     content: url("/img/screenshot.png");
 }
+
+img.logo {
+    height: 64px;
+    margin: 16px;
+}
+
+img.github-avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 8px;
+    margin: 16px;
+}

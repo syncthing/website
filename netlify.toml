@@ -4,8 +4,8 @@
   functions = "functions"
 
 [build.environment]
-  GO_VERSION = "1.13.10"
-  HUGO_VERSION = "0.62.2"
+  GO_VERSION = "1.20.2"
+  HUGO_VERSION = "0.111.2"
 
 [[redirects]]
   from = "/security.html"

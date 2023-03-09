@@ -10,6 +10,10 @@ for d in * ; do
 done
 popd
 
+pushd script
+go run . > ../themes/default/layouts/partials/github-sponsors.html
+popd
+
 rel=$(curl -s https://api.github.com/repos/syncthing/syncthing/releases/latest \
 	| grep tag_name \
 	| awk '{print $2}' \
