@@ -29,6 +29,10 @@ Donate securely using any major credit or debit card, processed by [Stripe](http
 <script src="https://www.google.com/recaptcha/api.js" defer></script>
 <script src="/js/stripe.js" defer></script>
 
+You can manage or cancel your existing recurring donation by visiting the
+[subscription portal](https://billing.stripe.com/p/login/9AQ6rx2cLbRhbhS5kk)
+and logging in with your email address.
+
 If you experience any issues with the donation handling, regret your
 donation and want a refund, or want to cancel a recurring donation please
 feel free to contact [donations@syncthing.org](mailto:donations@syncthing.org) at any time.
