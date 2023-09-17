@@ -88,18 +88,6 @@ blockquote, .metadata {
     color: #2bf;
 }
 
-/* Sponsors */
-
-#kastelo-logo {
-    max-height: 80px;
-    content: url("/img/kastelo-dark.svg");
-}
-
-#reefsolutions-logo {
-    content: url("/img/reefsol-dark.svg");
-    max-height: 60px;
-}
-
 /* screenshot */
 
 #main-screenshot {
