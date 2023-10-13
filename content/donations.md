@@ -9,7 +9,10 @@ servers and this website. Your donations help fund these costs. We also
 periodically award grants for the development of specific features, which is
 paid for by these donations.
 
-[Click to donate securely using any major credit or debit card.](https://donate.stripe.com/eVadSl1excyx7xScMM)
+[Click to donate securely using any major credit or debit
+card.](https://donate.stripe.com/eVadSl1excyx7xScMM) We also accept
+donations via [GitHub Sponsors](https://github.com/sponsors/syncthing) and
+[Liberapay](https://liberapay.com/Syncthing/).
 
 You can manage or cancel your existing recurring donation by visiting the
 [subscription portal](https://billing.stripe.com/p/login/9AQ6rx2cLbRhbhS5kk)
