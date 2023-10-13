@@ -1,7 +1,6 @@
 [build]
   publish = "_site"
   command = "./build.sh"
-  functions = "functions"
 
 [build.environment]
   GO_VERSION = "1.20.2"

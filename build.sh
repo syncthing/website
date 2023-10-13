@@ -1,15 +1,6 @@
 #!/bin/bash
 set -euo pipefail
 
-mkdir -p functions
-pushd functions-src
-for d in * ; do
-	pushd "$d"
-	go build -o "../../functions/$d"
-	popd
-done
-popd
-
 pushd script
 go run . > ../themes/default/layouts/partials/github-sponsors.html
 popd
