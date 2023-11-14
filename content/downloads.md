@@ -8,8 +8,6 @@ title: Downloads
 
 These are some popular and user friendly OS integrations, providing things like system tray icons, file browser integration, etc. These are good starting points if you are a new user unfamiliar with Syncthing, or not prone to loving the command line.
 
-- **[SyncTrayzor](https://github.com/canton7/SyncTrayzor/releases/latest)**:
-  Windows tray utility, filesystem watcher & launcher
 - **[syncthing-macos](https://github.com/syncthing/syncthing-macos/releases/latest)**:
   macOS application bundle
 
