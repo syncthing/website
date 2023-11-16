@@ -67,7 +67,7 @@ along the way.
   just between your own devices.
 
 - **Portable.** Configure and monitor Syncthing via a responsive and powerful
-  interface accessible via your browser. Works on Mac OS X, Windows, Linux,
+  interface accessible via your browser. Works on macOS, Windows, Linux,
   FreeBSD, Solaris, OpenBSD, and many others. Run it on your desktop computers
   and synchronize them with your server for backup.
 
