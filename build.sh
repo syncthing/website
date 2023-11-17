@@ -11,4 +11,4 @@ rel=$(curl -s https://api.github.com/repos/syncthing/syncthing/releases/latest \
 	| tr -d \",v)
 
 echo "stable: $rel" > data/release.yaml
-hugo
+hugo --minify

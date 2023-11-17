@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - publish-*
   workflow_dispatch:
 
 permissions:
@@ -27,7 +28,7 @@ jobs:
           hugo-version: 'latest'
 
       - name: Build
-        run: hugo --minify
+        run: ./build.sh
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
