@@ -18,7 +18,9 @@ concurrency:
 
 jobs:
   deploy:
+    name: Deploy to GitHub Pages
     runs-on: ubuntu-20.04
+    environment: github-pages
     steps:
       - uses: actions/checkout@v3
 
@@ -29,6 +31,8 @@ jobs:
 
       - name: Build
         run: ./build.sh
+        env:
+          GITHUB_TOKEN: ${{ secrets.ORGANISATION_TOKEN }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
