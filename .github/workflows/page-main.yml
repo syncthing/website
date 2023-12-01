@@ -6,6 +6,8 @@ on:
       - main
       - publish-*
   workflow_dispatch:
+  schedule: # Run every Monday morning
+    - cron: '20 6 * * 1'
 
 permissions:
   contents: read
@@ -19,7 +21,7 @@ concurrency:
 jobs:
   deploy:
     name: Deploy to GitHub Pages
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     environment: github-pages
     steps:
       - uses: actions/checkout@v3
