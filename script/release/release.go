@@ -36,10 +36,11 @@ type downloadOS struct {
 }
 
 type downloadAsset struct {
-	Name string
-	Size int
-	URL  string
-	Arch string
+	Name        string
+	Size        int
+	URL         string
+	Arch        string
+	Recommended bool
 
 	os         string
 	osWeight   int
@@ -70,10 +71,11 @@ func main() {
 			continue
 		}
 		filtered = append(filtered, downloadAsset{
-			Name: a.Name,
-			Size: a.Size,
-			URL:  a.BrowserDownloadURL,
-			Arch: humanReadableArch(parts[2]),
+			Name:        a.Name,
+			Size:        a.Size,
+			URL:         a.BrowserDownloadURL,
+			Arch:        humanReadableArch(parts[2]),
+			Recommended: isRecommended(parts[1], parts[2]),
 
 			os:         humanReadableOS(parts[1]),
 			osWeight:   osWeight(parts[1]),
@@ -111,6 +113,13 @@ func main() {
 		log.Fatal(err)
 	}
 	os.Stdout.Write(bs)
+}
+
+func isRecommended(os, arch string) bool {
+	if os == "macos" {
+		return arch == "universal"
+	}
+	return arch == "amd64" || arch == "arm64"
 }
 
 func osWeight(os string) int {
