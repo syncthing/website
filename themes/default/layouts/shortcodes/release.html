@@ -13,7 +13,8 @@
         <dt>{{.os}}</dt>
         <dd>{{ range $i, $a := .assets }}
             {{ if gt $i 0 }} &sdot; {{ end }}
-            <a href="{{$a.url}}">{{$a.arch}}</a>
+            <!-- The weird replace thing is to make spaces and dashes non-breaking so we avoid misleading-looking architecture names in the list -->
+            <a href="{{$a.url}}">{{replace (replace $a.arch " " "&nbsp;") "-" "&#8209;" | safe.HTML}}</a>
         {{ end }}</dd>
     </dl>
     {{ end }}

@@ -145,8 +145,8 @@ func archWeight(arch string) int {
 		return 3
 	case "arm":
 		return 4
-	case "loong64":
-		return 10
+	case "loong64", "mips64", "mips64le", "ppc64", "ppc64le", "riscv64":
+		return 5
 	}
 	return 9
 }
@@ -177,6 +177,26 @@ func humanReadableArch(arch string) string {
 		return "ARM (64-bit)"
 	case "universal":
 		return "Universal"
+	case "loong64":
+		return "Loong64"
+	case "riscv":
+		return "RISC-V (32 bit)"
+	case "riscv64":
+		return "RISC-V (64-bit)"
+	case "ppc64":
+		return "PowerPC (64-bit)"
+	case "ppc64le":
+		return "PowerPC (64-bit LE)"
+	case "mips64":
+		return "MIPS (64-bit)"
+	case "mips64le":
+		return "MIPS (64-bit LE)"
+	case "mips":
+		return "MIPS (32-bit)"
+	case "mipsle":
+		return "MIPS (32-bit LE)"
+	case "s390x":
+		return "IBM zSeries (64-bit)"
 	}
-	return strings.ToUpper(arch)
+	return arch
 }
