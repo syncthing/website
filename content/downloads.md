@@ -31,7 +31,7 @@ executable and a web based user interface.
 {{< release >}}
 
 If you are unsure what to download and you're running on a normal computer,
-please use the "64-bit (x86-64)" build for your operating system. If you're
+please use the "Intel/AMD (64-bit)" build for your operating system. If you're
 running on an oddball system such as a NAS, please consult your vendor.
 
 

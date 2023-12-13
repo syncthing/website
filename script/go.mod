@@ -5,6 +5,7 @@ go 1.20
 require (
 	github.com/shurcooL/githubv4 v0.0.0-20230704064427-599ae7bbf278
 	golang.org/x/oauth2 v0.14.0
+	gopkg.in/yaml.v3 v3.0.1
 )
 
 require (

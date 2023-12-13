@@ -31,6 +31,11 @@ jobs:
         with:
           hugo-version: 'latest'
 
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: 'stable'
+
       - name: Build
         run: ./build.sh
         env:

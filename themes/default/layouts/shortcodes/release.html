@@ -1,79 +1,22 @@
-{{ with $.Site.Data.release.stable }}
-<h5>Syncthing <b>v{{.}}</b></h5>
+{{ with $.Site.Data.release }}
+<h5>Syncthing <b>{{.version}}</b></h5>
 
-<div style="column-count: 2">
+<div style="column-count: 2" class="my-2">
     <dl class="dl-item">
         <dt>Source Code</dt>
-        <dd><b><a href="https://github.com/syncthing/syncthing/releases/download/v{{.}}/syncthing-source-v{{.}}.tar.gz">Source tar.gz</a></b>
+        <dd><a href="https://github.com/syncthing/syncthing/releases/download/v{{.}}/syncthing-source-v{{.}}.tar.gz">Source tar.gz</a>
             &sdot; <a href="https://github.com/syncthing/syncthing/releases/download/v{{.}}/syncthing-source-v{{.}}.tar.gz.asc">GPG signature</a>
         </dd>
     </dl>
+    {{ range .oses }}
     <dl class="dl-item">
-        <dt>Linux</dt>
-        <dd><b><a href="https://github.com/syncthing/syncthing/releases/download/v{{.}}/syncthing-linux-amd64-v{{.}}.tar.gz">64-bit (x86-64)</a></b>
-            &sdot; <a href="https://github.com/syncthing/syncthing/releases/download/v{{.}}/syncthing-linux-386-v{{.}}.tar.gz">32-bit (x86-32)</a>
-            &sdot; <a href="https://github.com/syncthing/syncthing/releases/download/v{{.}}/syncthing-linux-arm-v{{.}}.tar.gz">ARM</a>
-            &sdot; <a href="https://github.com/syncthing/syncthing/releases/download/v{{.}}/syncthing-linux-arm64-v{{.}}.tar.gz">ARM64</a>
-            &sdot; <a href="https://github.com/syncthing/syncthing/releases/download/v{{.}}/syncthing-linux-mips-v{{.}}.tar.gz">MIPS</a>
-            &sdot; <a href="https://github.com/syncthing/syncthing/releases/download/v{{.}}/syncthing-linux-mips64-v{{.}}.tar.gz">MIPS64</a>
-            &sdot; <a href="https://github.com/syncthing/syncthing/releases/download/v{{.}}/syncthing-linux-mipsle-v{{.}}.tar.gz">MIPS-LE</a>
-            &sdot; <a href="https://github.com/syncthing/syncthing/releases/download/v{{.}}/syncthing-linux-mips64le-v{{.}}.tar.gz">MIPS64-LE</a>
-            &sdot; <a href="https://github.com/syncthing/syncthing/releases/download/v{{.}}/syncthing-linux-ppc64-v{{.}}.tar.gz">PPC64</a>
-            &sdot; <a href="https://github.com/syncthing/syncthing/releases/download/v{{.}}/syncthing-linux-ppc64le-v{{.}}.tar.gz">PPC64-LE</a>
-            &sdot; <a href="https://github.com/syncthing/syncthing/releases/download/v{{.}}/syncthing-linux-riscv64-v{{.}}.tar.gz">RISC-V</a>
-            &sdot; <a href="https://github.com/syncthing/syncthing/releases/download/v{{.}}/syncthing-linux-s390x-v{{.}}.tar.gz">S/390x</a>
-        </dd>
+        <dt>{{.os}}</dt>
+        <dd>{{ range $i, $a := .assets }}
+            {{ if gt $i 0 }} &sdot; {{ end }}
+            <a href="{{$a.url}}">{{$a.arch}}</a>
+        {{ end }}</dd>
     </dl>
-    <dl class="dl-item">
-        <dt>Windows</dt>
-        <dd><b><a href="https://github.com/syncthing/syncthing/releases/download/v{{.}}/syncthing-windows-amd64-v{{.}}.zip">64-bit (x86-64)</a></b>
-            &sdot; <a href="https://github.com/syncthing/syncthing/releases/download/v{{.}}/syncthing-windows-386-v{{.}}.zip">32-bit (x86-32)</a>
-            &sdot; <a href="https://github.com/syncthing/syncthing/releases/download/v{{.}}/syncthing-windows-arm-v{{.}}.zip">ARM</a>
-            &sdot; <a href="https://github.com/syncthing/syncthing/releases/download/v{{.}}/syncthing-windows-arm64-v{{.}}.zip">ARM64</a>
-        </dd>
-    </dl>
-    <dl class="dl-item">
-        <dt>macOS</dt>
-        <dd><b><a href="https://github.com/syncthing/syncthing/releases/download/v{{.}}/syncthing-macos-universal-v{{.}}.zip">64-bit (Universal)</a></b>
-        </dd>
-    </dl>
-    <dl class="dl-item">
-        <dt>FreeBSD</dt>
-        <dd><b><a href="https://github.com/syncthing/syncthing/releases/download/v{{.}}/syncthing-freebsd-amd64-v{{.}}.tar.gz">64-bit (x86-64)</a></b>
-            &sdot; <a href="https://github.com/syncthing/syncthing/releases/download/v{{.}}/syncthing-freebsd-386-v{{.}}.tar.gz">32-bit (x86-32)</a>
-            &sdot; <a href="https://github.com/syncthing/syncthing/releases/download/v{{.}}/syncthing-freebsd-arm-v{{.}}.tar.gz">ARM</a>
-            &sdot; <a href="https://github.com/syncthing/syncthing/releases/download/v{{.}}/syncthing-freebsd-arm64-v{{.}}.tar.gz">ARM64</a>
-        </dd>
-    </dl>
-    <dl class="dl-item">
-        <dt>OpenBSD</dt>
-        <dd><b><a href="https://github.com/syncthing/syncthing/releases/download/v{{.}}/syncthing-openbsd-amd64-v{{.}}.tar.gz">64-bit (x86-64)</a></b>
-            &sdot; <a href="https://github.com/syncthing/syncthing/releases/download/v{{.}}/syncthing-openbsd-386-v{{.}}.tar.gz">32-bit (x86-32)</a>
-        </dd>
-    </dl>
-    <dl class="dl-item">
-        <dt>NetBSD</dt>
-        <dd><b><a href="https://github.com/syncthing/syncthing/releases/download/v{{.}}/syncthing-netbsd-amd64-v{{.}}.tar.gz">64-bit (x86-64)</a></b>
-            &sdot; <a href="https://github.com/syncthing/syncthing/releases/download/v{{.}}/syncthing-netbsd-386-v{{.}}.tar.gz">32-bit (x86-32)</a>
-            &sdot; <a href="https://github.com/syncthing/syncthing/releases/download/v{{.}}/syncthing-netbsd-arm-v{{.}}.tar.gz">ARM</a>
-            &sdot; <a href="https://github.com/syncthing/syncthing/releases/download/v{{.}}/syncthing-netbsd-arm64-v{{.}}.tar.gz">ARM64</a>
-        </dd>
-    </dl>
-    <dl class="dl-item">
-        <dt>Dragonfly BSD</dt>
-        <dd><b><a href="https://github.com/syncthing/syncthing/releases/download/v{{.}}/syncthing-dragonfly-amd64-v{{.}}.tar.gz">64-bit (x86-64)</a></b>
-        </dd>
-    </dl>
-    <dl class="dl-item">
-        <dt>Illumos</dt>
-        <dd><b><a href="https://github.com/syncthing/syncthing/releases/download/v{{.}}/syncthing-illumos-amd64-v{{.}}.tar.gz">64-bit (x86-64)</a></b>
-        </dd>
-    </dl>
-    <dl class="dl-item">
-        <dt>Solaris</dt>
-        <dd><b><a href="https://github.com/syncthing/syncthing/releases/download/v{{.}}/syncthing-solaris-amd64-v{{.}}.tar.gz">64-bit (x86-64)</a></b>
-        </dd>
-    </dl>
+    {{ end }}
 </div>
 {{ else }}
     <p>Download the <a href="https://github.com/syncthing/syncthing/releases/latest">latest release</a> from GitHub.</p>
