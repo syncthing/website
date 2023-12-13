@@ -2,12 +2,6 @@
 <h5>Syncthing <b>{{.version}}</b></h5>
 
 <div style="column-count: 2" class="my-2">
-    <dl class="dl-item">
-        <dt>Source Code</dt>
-        <dd><a href="https://github.com/syncthing/syncthing/releases/download/v{{.}}/syncthing-source-v{{.}}.tar.gz">Source tar.gz</a>
-            &sdot; <a href="https://github.com/syncthing/syncthing/releases/download/v{{.}}/syncthing-source-v{{.}}.tar.gz.asc">GPG signature</a>
-        </dd>
-    </dl>
     {{ range .oses }}
     <dl class="dl-item">
         <dt>{{.os}}</dt>
@@ -18,6 +12,12 @@
         {{ end }}</dd>
     </dl>
     {{ end }}
+    <dl class="dl-item">
+        <dt>Source Code</dt>
+        <dd><a href="https://github.com/syncthing/syncthing/releases/download/v{{.}}/syncthing-source-v{{.}}.tar.gz">Source tar.gz</a>
+            &sdot; <a href="https://github.com/syncthing/syncthing/releases/download/v{{.}}/syncthing-source-v{{.}}.tar.gz.asc">GPG signature</a>
+        </dd>
+    </dl>
 </div>
 {{ else }}
     <p>Download the <a href="https://github.com/syncthing/syncthing/releases/latest">latest release</a> from GitHub.</p>

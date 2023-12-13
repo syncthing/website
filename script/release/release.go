@@ -114,10 +114,11 @@ func main() {
 }
 
 func osWeight(os string) int {
+	// In order of commonality among our users
 	switch os {
-	case "windows":
-		return 1
 	case "linux":
+		return 1
+	case "windows":
 		return 2
 	case "macos":
 		return 3
