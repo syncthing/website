@@ -18,6 +18,12 @@ integration has their own issue tracker for integration-specific issues, but
 discussion and assistance for all of them is welcome on the
 [forum](https://forum.syncthing.net/).
 
+## Linux distribution packages
+
+Syncthing is available out-of-the-box as part of many Linux distributions,
+though often not with the most up-to-date version. We also maintain packages
+and installation instructions for **Debian** & **Ubuntu** at
+[apt.syncthing.net](https://apt.syncthing.net).
 
 ## Android
 
@@ -34,10 +40,5 @@ executable and a web based user interface.
 If you are unsure what to download and you're running on a normal computer,
 please use the "Intel/AMD (64-bit)" build for your operating system. If you're
 running on an oddball system such as a NAS, please consult your vendor.
-
-
-## Debian / Ubuntu Packages
-
-Packages and installation instructions are available at [apt.syncthing.net](https://apt.syncthing.net).
 
 {{% sponsors %}}
