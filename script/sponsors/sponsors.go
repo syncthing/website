@@ -21,6 +21,30 @@ const sponsorsOutput = `{{range .}}
 
 var sponsorsOutputTpl = template.Must(template.New("sponsorsOutputTpl").Parse(sponsorsOutput))
 
+// Static sponsors (predate Github Sponsors)
+var staticSponsors = []sponsor{
+	{
+		Amount:    1000 * 100,
+		Name:      "Kastelo",
+		AvatarURL: "https://cdn.kastelo.net/prm/civ3ci-shield-blue-padded-white-512.png",
+		LinkURL:   "https://kastelo.net/",
+	},
+	{
+		Amount:    100 * 100,
+		Name:      "REEF Solutions",
+		AvatarURL: "/img/reefsol.png",
+		LinkURL:   "https://reefsolutions.com/",
+	},
+}
+
+type sponsor struct {
+	Amount    int
+	Name      string
+	Login     string
+	AvatarURL string
+	LinkURL   string
+}
+
 func main() {
 	src := oauth2.StaticTokenSource(
 		&oauth2.Token{AccessToken: os.Getenv("GITHUB_TOKEN")},
@@ -70,16 +94,7 @@ func main() {
 		"cursor": (*githubv4.String)(nil),
 	}
 
-	type sponsor struct {
-		Amount    int
-		Name      string
-		Login     string
-		AvatarURL string
-		LinkURL   string
-	}
-
-	var sponsors []sponsor
-
+	sponsors := staticSponsors
 	for {
 		if err := client.Query(context.Background(), &query, vars); err != nil {
 			fmt.Println(err)

@@ -84,3 +84,4 @@ along the way.
 {{% /row %}}
 
 {{% support %}}
+{{% sponsors %}}
