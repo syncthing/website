@@ -1,17 +1,20 @@
 package main
 
 import (
+	"cmp"
 	"context"
 	"fmt"
 	"html/template"
+	"net/url"
 	"os"
+	"slices"
 
 	"github.com/shurcooL/githubv4"
 	"golang.org/x/oauth2"
 )
 
 const sponsorsOutput = `{{range .}}
-<a href="https://github.com/{{.Login}}">
+<a href="{{.LinkURL}}">
 	<img src="{{.AvatarURL}}" class="img github-avatar" alt="{{.Name}}">
 </a>
 {{end}}`
@@ -35,14 +38,16 @@ func main() {
 				Edges []struct {
 					Node struct {
 						User struct {
-							Login     string
-							Name      string
-							AvatarURL string
+							Login      string
+							Name       string
+							AvatarURL  string
+							WebsiteURL string
 						} `graphql:"... on User"`
 						Organization struct {
-							Login     string
-							Name      string
-							AvatarURL string
+							Login      string
+							Name       string
+							AvatarURL  string
+							WebsiteURL string
 						} `graphql:"... on Organization"`
 						Sponsorable struct {
 							Sponsorship struct {
@@ -65,7 +70,15 @@ func main() {
 		"cursor": (*githubv4.String)(nil),
 	}
 
-	sponsors := []map[string]any{}
+	type sponsor struct {
+		Amount    int
+		Name      string
+		Login     string
+		AvatarURL string
+		LinkURL   string
+	}
+
+	var sponsors []sponsor
 
 	for {
 		if err := client.Query(context.Background(), &query, vars); err != nil {
@@ -73,15 +86,16 @@ func main() {
 			return
 		}
 
-		for _, sponsor := range query.Organization.Sponsors.Edges {
-			for _, sponsorship := range sponsor.Node.Sponsorable.Sponsorship.Edges {
+		for _, spons := range query.Organization.Sponsors.Edges {
+			for _, sponsorship := range spons.Node.Sponsorable.Sponsorship.Edges {
 				if sponsorship.Node.Tier.MonthlyPriceInCents >= 100*100 {
-					s := map[string]any{
-						"Name":      sponsor.Node.User.Name,
-						"Login":     sponsor.Node.User.Login,
-						"AvatarURL": sponsor.Node.User.AvatarURL,
-						"Amount":    sponsorship.Node.Tier.MonthlyPriceInCents / 100,
+					s := sponsor{
+						Name:      spons.Node.User.Name,
+						Login:     spons.Node.User.Login,
+						AvatarURL: spons.Node.User.AvatarURL,
+						Amount:    sponsorship.Node.Tier.MonthlyPriceInCents,
 					}
+					s.LinkURL = urlFrom(spons.Node.User.WebsiteURL, "https://github.com/"+spons.Node.User.Login+"/")
 					sponsors = append(sponsors, s)
 				}
 			}
@@ -93,5 +107,36 @@ func main() {
 		vars["cursor"] = githubv4.NewString(query.Organization.Sponsors.PageInfo.EndCursor)
 	}
 
+	// Sort by amount, highest first, then by name
+	slices.SortFunc(sponsors, func(a, b sponsor) int {
+		if v := cmp.Compare(b.Amount, a.Amount); v != 0 {
+			return v
+		}
+		return cmp.Compare(a.Name, b.Name)
+	})
+
 	sponsorsOutputTpl.Execute(os.Stdout, sponsors)
+}
+
+// urlFrom returns the first reasonable, working URL in the list
+func urlFrom(urls ...string) string {
+	for _, alt := range urls {
+		if alt == "" {
+			continue
+		}
+		if u, err := url.Parse(alt); err == nil {
+			if u.Scheme == "" {
+				u.Scheme = "https"
+			}
+			if u.Host == "" && u.Path != "" {
+				u.Host = u.Path
+				u.Path = ""
+			}
+			if u.Path == "" {
+				u.Path = "/"
+			}
+			return u.String()
+		}
+	}
+	return ""
 }
