@@ -18,12 +18,6 @@ hr {
     border-color: #808080;
 }
 
-nav .navbar-brand #logo-img {
-    background-image: url(../img/logo-light.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
-}
-
 nav .nav-item {
     color: rgba(255, 255, 255, .5);
 }
