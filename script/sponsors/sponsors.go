@@ -14,7 +14,7 @@ import (
 )
 
 const sponsorsOutput = `{{range .}}
-<a href="{{.LinkURL}}">
+<a href="{{.LinkURL}}" rel="nofollow sponsored">
 	<img src="{{.AvatarURL}}" class="img github-avatar" alt="{{.Name}}">
 </a>
 {{end}}`
