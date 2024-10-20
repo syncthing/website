@@ -25,11 +25,6 @@ though often not with the most up-to-date version. We also maintain packages
 and installation instructions for **Debian** & **Ubuntu** at
 [apt.syncthing.net](https://apt.syncthing.net).
 
-## Android
-
-The Android app is available on [Google Play](https://play.google.com/store/apps/details?id=com.nutomic.syncthingandroid) and [F-Droid](https://f-droid.org/packages/com.nutomic.syncthingandroid/).
-
-
 ## Base Syncthing
 
 This is the basic Syncthing distribution, providing a command line / daemon like
