@@ -7,17 +7,17 @@ title: Security
 
 ## Reporting Issues
 
-**If you believe that you've found a Syncthing-related security vulnerability,
-please report it by emailing security@syncthing.net.** Do not report it in the
-open issue tracker. The [security team PGP key
-(`B683AD7B76CAB013`)](/security-key.txt) can be used to send encrypted mail or
-to verify responses received from that address.
+**If you believe that you've found a Syncthing-related security
+vulnerability, please report it by emailing security@syncthing.net.** Do not
+report it in the open issue tracker. The [security team PGP
+key](/security-key.txt) can be used to send encrypted mail or to verify
+responses received from that address.
 
 
 ## Release Signatures
 
-The [release PGP key (`D26E6ED000654A3E`)](/release-key.txt) can be used to
-verify the signatures on the official binary releases.
+The [release PGP key](/release-key.txt) can be used to verify the signatures
+on the official binary releases.
 
 
 ### Verifying a Release Signature
