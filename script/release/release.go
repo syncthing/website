@@ -53,6 +53,9 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
+	if res.StatusCode != http.StatusOK {
+		log.Fatal(res.Status)
+	}
 	defer res.Body.Close()
 	var rel githubRelease
 	err = json.NewDecoder(res.Body).Decode(&rel)
@@ -100,10 +103,12 @@ func main() {
 	}
 	for _, a := range filtered {
 		if len(p.OSes) == 0 || p.OSes[len(p.OSes)-1].OS != a.os {
+			log.Println("-", a.os)
 			p.OSes = append(p.OSes, downloadOS{
 				OS: a.os,
 			})
 		}
+		log.Println("  -", a.Arch)
 		p.OSes[len(p.OSes)-1].Assets = append(p.OSes[len(p.OSes)-1].Assets, a)
 	}
 
