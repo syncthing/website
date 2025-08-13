@@ -38,6 +38,6 @@ running on an oddball system such as a NAS, please consult your vendor.
 
 ## Android
 
-For Android, please see the third party app <a target="_blank" href="https://github.com/Catfriend1/syncthing-android">Syncthing-Fork</a>. Note that this is not an official Syncthing release.
+For Android, please see the third party apps <a target="_blank" href="https://github.com/Catfriend1/syncthing-android">Syncthing-Fork</a> and <a target="_blank" href="https://github.com/Catfriend1/syncthing-lite">Syncthing-Lite</a>. Note that they are not official Syncthing releases.
 
 {{% sponsors %}}
