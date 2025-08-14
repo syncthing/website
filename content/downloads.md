@@ -11,6 +11,8 @@ These are some popular and user friendly OS integrations, providing things like 
 - **[syncthing-macos](https://github.com/syncthing/syncthing-macos/releases/latest)**:
   macOS application bundle
 - **[Syncthing Windows Setup](https://github.com/Bill-Stewart/SyncthingWindowsSetup/)**: a lightweight yet full-featured Windows installer
+- **[SyncTrayzor v2](https://github.com/GermanCoding/SyncTrayzor/releases/latest)**:
+  Windows tray utility, filesystem watcher & launcher
 
 There's a wealth of further integrations of all kinds listed on the [community
 contributions](https://docs.syncthing.net/users/contrib.html) page. Each
