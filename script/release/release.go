@@ -171,6 +171,8 @@ func humanReadableOS(os string) string {
 	switch os {
 	case "macos":
 		return "macOS"
+	case "illumos":
+		return "illumos"
 	}
 
 	// Capitalise the first letter
