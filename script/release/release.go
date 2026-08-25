@@ -3,6 +3,7 @@ package main
 import (
 	"cmp"
 	"encoding/json"
+	"fmt"
 	"log"
 	"net/http"
 	"os"
@@ -19,9 +20,8 @@ type githubRelease struct {
 	TagName     string    `json:"tag_name"`
 	PublishedAt time.Time `json:"published_at"`
 	Assets      []struct {
-		Name               string `json:"name"`
-		Size               int    `json:"size"`
-		BrowserDownloadURL string `json:"browser_download_url"`
+		Name string `json:"name"`
+		Size int    `json:"size"`
 	}
 }
 
@@ -73,10 +73,11 @@ func main() {
 		if parts[0] != "syncthing" {
 			continue
 		}
+		url := fmt.Sprintf("https://release.syncthingcdn.net/%s/%s", rel.TagName, a.Name)
 		filtered = append(filtered, downloadAsset{
 			Name:        a.Name,
 			Size:        a.Size,
-			URL:         a.BrowserDownloadURL,
+			URL:         url,
 			Arch:        humanReadableArch(parts[2]),
 			Recommended: isRecommended(parts[1], parts[2]),
 
