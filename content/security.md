@@ -8,10 +8,8 @@ title: Security
 ## Reporting Issues
 
 **If you believe that you've found a Syncthing-related security
-vulnerability, please report it by emailing security@syncthing.net.** Do not
-report it in the open issue tracker. The [security team PGP
-key](/security-key.txt) can be used to send encrypted mail or to verify
-responses received from that address.
+vulnerability, please report it by email to security@syncthing.net.** Do not
+report it in the open issue tracker.
 
 
 ## Release Signatures
