@@ -3,30 +3,22 @@ package main
 import (
 	"cmp"
 	"context"
-	"fmt"
-	"html/template"
+	"log"
 	"net/url"
 	"os"
 	"slices"
 
 	"github.com/shurcooL/githubv4"
 	"golang.org/x/oauth2"
+	"gopkg.in/yaml.v3"
 )
-
-const sponsorsOutput = `{{range .}}
-<a href="{{.LinkURL}}" rel="nofollow sponsored">
-	<img src="{{.AvatarURL}}" class="img github-avatar" alt="{{.Name}}">
-</a>
-{{end}}`
-
-var sponsorsOutputTpl = template.Must(template.New("sponsorsOutputTpl").Parse(sponsorsOutput))
 
 // Static sponsors (predate Github Sponsors)
 var staticSponsors = []sponsor{
 	{
 		Amount:    1000 * 100,
 		Name:      "Kastelo",
-		AvatarURL: "https://cdn.kastelo.net/prm/civ3ci-shield-blue-padded-white-512.png",
+		AvatarURL: "https://cdn.kastelo.net/prm/i6erbm-shield-green-dark-padded-512.png",
 		LinkURL:   "https://kastelo.net/",
 	},
 	{
@@ -38,9 +30,9 @@ var staticSponsors = []sponsor{
 }
 
 type sponsor struct {
-	Amount    int
+	Amount    int `yaml:"-"`
 	Name      string
-	Login     string
+	Login     string `yaml:"-"`
 	AvatarURL string
 	LinkURL   string
 }
@@ -97,8 +89,7 @@ func main() {
 	sponsors := staticSponsors
 	for {
 		if err := client.Query(context.Background(), &query, vars); err != nil {
-			fmt.Println(err)
-			return
+			log.Fatal(err)
 		}
 
 		for _, spons := range query.Organization.Sponsors.Edges {
@@ -130,7 +121,14 @@ func main() {
 		return cmp.Compare(a.Name, b.Name)
 	})
 
-	sponsorsOutputTpl.Execute(os.Stdout, sponsors)
+	// Produce the YAML data for the sponsors partial.
+	bs, err := yaml.Marshal(sponsors)
+	if err != nil {
+		log.Fatal(err)
+	}
+	if _, err := os.Stdout.Write(bs); err != nil {
+		log.Fatal(err)
+	}
 }
 
 // urlFrom returns the first reasonable, working URL in the list

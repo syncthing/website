@@ -2,7 +2,7 @@
 set -euo pipefail
 
 pushd script
-go run ./sponsors > ../themes/default/layouts/partials/github-sponsors.html
+go run ./sponsors > ../data/sponsors.yaml
 go run ./release > ../data/release.yaml
 popd
 
